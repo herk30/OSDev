@@ -7,18 +7,21 @@ git clone https://sourceware.org/git/binutils-gdb.git
 mkdir build-binutils
 cd build-binutils
 ../binutils-gdb/configure --target=i686-elf --prefix=/usr/local/cross --disable-nls
-make
+sudo make
 sudo make install
 cd ~/cross-compiler
 mkdir build-gcc
 cd build-gcc
 ../gcc/configure --target=i686-elf --prefix=/usr/local/cross --disable-nls --enable-languages=c,c++ --without-headers
-make all-gcc
+sudo make all-gcc
 sudo make install-gcc
-make all-target-libgcc
+sudo make all-target-libgcc
 sudo make install-target-libgcc
+nano ~/.zshrc
+
 export PATH=/usr/local/cross/bin:$PATH
-source ~/.bashrc
+source ~/.zshrc
+echo $PATH
+
 i686-elf-gcc --version
 i686-elf-as --version
-
