@@ -1,1 +1,4 @@
-qemu-system-x86_64 -boot d -cdrom myiso.iso -m 512
+cd ~/OSDev
+
+qemu-system-i386 -cdrom myos.iso
+sudo dd if=myos.iso of=/dev/sdx && sync
