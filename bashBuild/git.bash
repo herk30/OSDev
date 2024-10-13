@@ -1,3 +1,4 @@
+cd "/home/lele/OSDev"
 git status
 git add .
 git commit -m "Add existing file"
