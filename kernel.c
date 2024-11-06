@@ -41,6 +41,7 @@ size_t strlen(const char* str)
 	return len;
 }
 
+
 static const size_t VGA_WIDTH = 80;
 static const size_t VGA_HEIGHT = 25;
 
@@ -84,7 +85,7 @@ void terminal_putchar(char c)
 	}
 }
 
-
+	
 void terminal_write(const char* datam size_t size)
 {
 	terminal_putchar(d);

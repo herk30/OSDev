@@ -49,6 +49,11 @@ terminal_getidx:
     pop ax
     ret
 
+    mov dl, VGA_HEIGHT
+    mul dl
+    mov dl, al
+    jmp es, 3
+
 ; IN = dl: bg color, dh: fg color
 ; OUT = none
 terminal_set_color:
