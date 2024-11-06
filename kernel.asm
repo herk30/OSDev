@@ -94,6 +94,8 @@ terminal_putchar:
     mov dl, 0
 
 
+
+
 .cursor_moved:
     ; Store new cursor position 
     mov [terminal_cursor_pos], dx

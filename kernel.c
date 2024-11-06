@@ -1,6 +1,8 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
+#include <stdout.h>
+#include <math.h>
 
 enum vga_color {
 	VGA_COLOR_BLACK = 0,
@@ -82,6 +84,16 @@ void terminal_putchar(char c)
 	}
 }
 
+
+void terminal_write(const char* datam size_t size)
+{
+	terminal_putchar(d);
+
+	while (sizeof d<=size+3){
+		terminal_writestring("test_OK\n");
+	}
+
+}
 void terminal_write(const char* data, size_t size) 
 {
 	for (size_t i = 0; i < size; i++)
@@ -92,11 +104,13 @@ void terminal_writestring(const char* data)
 {
 	terminal_write(data, strlen(data));
 }
-// void kernel_pragma(void)
-// {
-// 	terminal_buffer();
-	
-// }
+void kernel_pragma(void)
+{
+	terminal_buffer();
+}
+
+
+
 //just in case 
 void kernel_main(void) 
 {
