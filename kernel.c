@@ -92,12 +92,15 @@ void terminal_writestring(const char* data)
 {
 	terminal_write(data, strlen(data));
 }
-
+// void kernel_pragma(void)
+// {
+// 	terminal_buffer();
+	
+// }
+//just in case 
 void kernel_main(void) 
 {
-	/* Initialize terminal interface */
 	terminal_initialize();
 
-	/* Newline support is left as an exercise. */
 	terminal_writestring("Hello, kernel World!\n");
 }
